@@ -20,7 +20,13 @@
 		// Resource Monitor - https://marketplace.visualstudio.com/items?itemName=mutantdino.resourcemonitor
 		"mutantdino.resourcemonitor",
 		// GitLens — Git supercharged - https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens
-		"eamodio.gitlens"
+		"eamodio.gitlens",
+		// npm Intellisense - https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense
+		"christian-kohler.npm-intellisense",
+		// Prettier - Code formatter - https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+		"esbenp.prettier-vscode",
+		// ES7+ React/Redux/React-Native snippets - https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets
+		"dsznajder.es7-react-js-snippets"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
