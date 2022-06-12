@@ -1,19 +1,23 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Provider as PaperProvider, DefaultTheme as PaperDefaultTheme } from 'react-native-paper';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+
+import MyNavigator from './src/navigations/MyNavigator';
+
+import { CombinedDefaultTheme } from './src/themes/AppTheme';
+import { AuthProvider } from './src/context/AuthContext';
+
+
+const Tab = createMaterialBottomTabNavigator();
 
 export default function App() {
+
+
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-    </View>
+    <PaperProvider theme={CombinedDefaultTheme}>
+      <AuthProvider>
+        <MyNavigator />
+      </AuthProvider>
+    </PaperProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
