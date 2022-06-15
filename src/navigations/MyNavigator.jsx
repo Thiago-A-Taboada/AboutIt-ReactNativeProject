@@ -27,7 +27,7 @@ export default function MyNavigator({ navigation }) {
     <NavigationContainer theme={CombinedDefaultTheme}>
       <Stack.Navigator theme={CombinedDefaultTheme} >
 
-        {authData ? (
+        {true ? (
           <Stack.Screen
             name="HomeTabs"
             component={HomeTabs}

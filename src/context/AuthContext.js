@@ -19,7 +19,7 @@ export const AuthProvider = ({ children }) => {
 
     const signIn = async (_username, _password) => {
 
-        setAuthData({ user: _username, password: _password })
+        setAuthData({ user: '_username', password: '_password' })
          
     }
 

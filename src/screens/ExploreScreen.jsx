@@ -6,12 +6,12 @@ import { Button } from 'react-native-paper';
 export default function Explore({ navigation }) {
   const [text, setText] = React.useState("");
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <View >
       <Text>Explore!</Text>
 
 
       <TextInput
-        label="Senha"
+        label=" Buscar"
         value={text}
         onChangeText={text => setText(text)}
       />

@@ -22,14 +22,14 @@ const styles = StyleSheet.create({
         marginLeft: "auto",
         marginRight: "auto",
         marginBottom: 55,
-        height: 60,
+         
     },
     inputPassword: {
         width: 300,
         marginLeft: "auto",
         marginRight: "auto",
         marginBottom: 22,
-        height: 60,
+    
     },
     textForget: {
         textAlign: "right",
@@ -51,13 +51,13 @@ const styles = StyleSheet.create({
 
 export default function SignInScreen() {
 
-    const [email, setEmail] = React.useState('');
+    const [email, setEmail] = React.useState('dwdd');
     const [password, setPassword] = React.useState('');
 
     const auth = useAuth();
 
     function handleSignIn() {
-        //auth.setAuthData(email)
+        auth.setAuthData(email)
         if (email.length > 0 && password.length > 0) {
             auth.signIn(email, password)
         } else if (email.length <= 0) {

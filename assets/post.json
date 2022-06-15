@@ -1,0 +1,47 @@
+[
+    {
+      "communityName" : "ladroesdevento",
+      "communityId": 1,
+      "idUser": 1,
+      "id": 1,
+      "thumbnailCommunity": "https://via.placeholder.com/100/92c952",
+      "title": "accusamus beatae ad facilis cum similique qui sunt",
+      "communityContent": "https://via.placeholder.com/360x116/92c952"
+    },
+    {
+      "communityName" : "ladroesdevento",
+      "communityId": 1,
+      "idUser": 1,
+      "id": 2,
+      "thumbnailCommunity": "https://via.placeholder.com/100/771796",
+      "title": "reprehenderit est deserunt velit ipsam",
+      "communityContent": "https://via.placeholder.com/360x116/771796"
+    },
+    {
+      "communityName" : "ladroesdevento",
+      "communityId": 1,
+      "idUser": 2,
+      "id": 3,
+      "thumbnailCommunity": "https://via.placeholder.com/100/24f355",
+      "title": "officia porro iure quia iusto qui ipsa ut modi",
+      "communityContent": "https://via.placeholder.com/360x116/24f355"
+    },
+    {
+      "communityName" : "ladroesdevento",
+      "communityId": 2,
+      "idUser": 3,
+      "id": 4,
+      "thumbnailCommunity": "https://via.placeholder.com/100/d32776",
+      "title": "culpa odio esse rerum omnis laboriosam voluptate repudiandae",
+      "communityContent": "https://via.placeholder.com/360x116/d32776"
+    },
+    {
+      "communityName" : "ladroesdevento",
+      "communityId": 1,
+      "idUser": 5,
+      "id": 5,
+      "thumbnailCommunity": "https://via.placeholder.com/100/f66b97",
+      "title": "natus nisi omnis corporis facere molestiae rerum in",
+      "communityContent": "https://via.placeholder.com/360x116/f66b97"
+    }
+]
