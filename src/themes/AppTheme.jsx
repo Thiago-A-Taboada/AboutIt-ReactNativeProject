@@ -10,8 +10,8 @@ export const CombinedDefaultTheme = {
     ...NavigationDefaultTheme.colors,
     primary: '#232326',
     background: '#232326',
-  /*   background: "white", */
-    text: '#fff',
+    text: '#EBECFF',
+    surface: '#343438',
     disabled: '#9B8EBB',
     
 

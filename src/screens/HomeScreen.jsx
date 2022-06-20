@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Text, View, FlatList } from 'react-native';
-import { ActivityIndicator, Button, Card, List, Title } from 'react-native-paper';
+import { ActivityIndicator, Avatar, Button, Card, List, Title } from 'react-native-paper';
 import Post from '../components/Post';
 import { useAuth } from '../context/AuthContext';
 
@@ -21,10 +21,8 @@ export default function Home({ navigation }) {
         })
     } */
 
-    
-
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', margin: 10 }}>
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Olá, usuario</Text>
        {/*  {auth.authData ? auth.authData.user : '...'} */}
       
@@ -33,20 +31,19 @@ export default function Home({ navigation }) {
 
        <ActivityIndicator animating={isLoading} />
       <FlatList
-        style={{ color: "black", borderWidth: 10, borderColor: 'pink' }}
         data={users}
         renderItem={({ item }) => (
-          /*   <View>
-              <Text>{(item.title)}</Text>
-              
-            </View> */
-          <Card style={{width: 360}}>
-           <Card.Title title="22222222" subtitle={item.idUser}/>
-            <Card.Content></Card.Content>
-          </Card>
+            <Card style={{ marginVertical: 5, marginHorizontal: 0, paddingBottom: 17}}>
+              <Card.Title left={(props) => <Avatar.Image {...props} source={{uri: item.thumbnailCommunity}} />} title={item.communityName} subtitle={item.idUser} />
+              <Card.Content>
+                <Title>{item.title}</Title>
+              </Card.Content>
+              <Card.Cover source={item.communityContent} />
+            </Card>
         )}
 
       />
+
       
 
     </View>
