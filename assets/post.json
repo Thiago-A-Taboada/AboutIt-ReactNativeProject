@@ -2,46 +2,37 @@
     {
       "communityName" : "ladroesdevento",
       "communityId": 1,
-      "idUser": 1,
+      "idUser": "narutinho",
       "id": 1,
       "thumbnailCommunity": "https://via.placeholder.com/100/92c952",
-      "title": "accusamus beatae ad facilis cum similique qui sunt",
-      "communityContent": "https://via.placeholder.com/360x116/92c952"
+      "title": "Quem quer trocar de figurinha comigo?rsrs",
+      "communityContent": "https://raw.githubusercontent.com/Thiago-A-Taboada/AboutIt-ReactNativeProject/master/assets/img-post-1.png"
     },
     {
       "communityName" : "fnafroleplay",
       "communityId": 3,
-      "idUser": 1,
+      "idUser": "bartsimpson",
       "id": 2,
       "thumbnailCommunity": "https://via.placeholder.com/100/771796",
-      "title": "reprehenderit est deserunt velit ipsam",
-      "communityContent": "https://via.placeholder.com/360x116/771796"
+      "title": "qual a melhor cola pra fazer miniatura de palito de picolé?",
+      "communityContent": "https://raw.githubusercontent.com/Thiago-A-Taboada/AboutIt-ReactNativeProject/master/assets/img-post-2.png"
     },
     {
       "communityName" : "capivarasflutuantes",
       "communityId": 2,
-      "idUser": 2,
+      "idUser": "minhoinho",
       "id": 3,
       "thumbnailCommunity": "https://via.placeholder.com/100/24f355",
-      "title": "officia porro iure quia iusto qui ipsa ut modi",
-      "communityContent": "https://via.placeholder.com/360x116/24f355"
+      "title": "como se eu to sendo traido?:",
+      "communityContent": "https://raw.githubusercontent.com/Thiago-A-Taboada/AboutIt-ReactNativeProject/master/assets/img-post-3.png"
     },
     {
       "communityName" : "capivarasflutuantes",
       "communityId": 2,
-      "idUser": 3,
+      "idUser": "raduken",
       "id": 4,
       "thumbnailCommunity": "https://via.placeholder.com/100/d32776",
-      "title": "culpa odio esse rerum omnis laboriosam voluptate repudiandae",
-      "communityContent": "https://via.placeholder.com/360x116/d32776"
-    },
-    {
-      "communityName" : "ladroesdevento",
-      "communityId": 1,
-      "idUser": 5,
-      "id": 5,
-      "thumbnailCommunity": "https://via.placeholder.com/100/f66b97",
-      "title": "natus nisi omnis corporis facere molestiae rerum in",
-      "communityContent": "https://via.placeholder.com/360x116/f66b97"
+      "title": "veja só o que mandaram pra mim no zape",
+      "communityContent": "https://raw.githubusercontent.com/Thiago-A-Taboada/AboutIt-ReactNativeProject/master/assets/img-post-4.png"
     }
 ]
