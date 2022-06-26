@@ -1,10 +1,13 @@
 import * as React from 'react';
 import { Text, View, FlatList } from 'react-native';
-import { ActivityIndicator, Appbar, Avatar, Button, Card, List, Searchbar, Title } from 'react-native-paper';
+import { ActivityIndicator, Appbar, Avatar, Button, Card, Drawer, List, Searchbar, Title } from 'react-native-paper';
 import Post from '../components/Post';
 import { useAuth } from '../context/AuthContext';
-
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import json from '../../assets/post.json';
+import { DrawerActions } from '@react-navigation/native';
+
+
 
 export default function Home({ navigation }) {
   const auth = useAuth()
@@ -24,17 +27,21 @@ export default function Home({ navigation }) {
 
   return (
     <>
+      
       <Appbar.Header style={{ justifyContent: 'space-between' }}>
-        <Appbar.Action icon="menu" />
+        <Appbar.Action icon="menu" 
+        onPress={() => navigation.dispatch(DrawerActions.openDrawer())} />
         <Searchbar style={{ width: 280, }} placeholder="Buscar" />
-        <Appbar.Action icon="circle" />
+        <Appbar.Action icon="circle" 
+          onPress={() => navigation.dispatch(DrawerActions.openDrawer())}
+        />
       </Appbar.Header>
+   
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         {/*  {auth.authData ? auth.authData.user : '...'} */}
 
         {/* <Button mode='contained' onPress={() => auth.signOut()}>saiiiiir</Button>
  */}
-
         <ActivityIndicator animating={isLoading} />
         <FlatList
           data={users}
@@ -53,3 +60,4 @@ export default function Home({ navigation }) {
     </>
   );
 }
+ 
