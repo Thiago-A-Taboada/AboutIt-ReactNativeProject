@@ -16,52 +16,12 @@ import { FlatList } from 'react-native-gesture-handler';
 import json from '../../assets/post.json';
 import { StyleSheet, View } from 'react-native';
 import ProfileItem from '../components/ProfileItem';
+import CustomDrawerContent from '../components/CustomDrawerContent';
+import {UploadDrawer,  HomeDrawer, ChatDrawer}  from './MyDrawers';
 const Tab = createMaterialBottomTabNavigator();
 const DrawerNav = createDrawerNavigator();
 
-function CustomDrawerContent(props) {
-    const [users, setUsers] = React.useState(json);
-
-
-    return (
-        <DrawerContentScrollView style={{ backgroundColor: '#232326' }}>
-            <View style={{ flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', borderWidth: 0 }}>
-                <Avatar.Icon size={120} icon="circle" />
-                <Text style={{ fontSize: 25, color: '#B6B9D9' }}>Fulano</Text>
-            </View>
-
-            <ProfileItem title="Meu Perfil" icon="account" />
-            <ProfileItem title="Criar uma comunidade" icon="forum" />
-            <ProfileItem title="Salvos" icon="content-save" />
-            <ProfileItem title="Meu Perfil" icon="history" />
-          
-            <DrawerItemList {...props} />
-            <Text style={{ marginLeft: 10, marginTop: 40, marginBottom: 20 }}>Minhas Comunidades</Text>
-
-            {users.map((i) => {
-                return (<DrawerItem style={styles.itemList} key={i.id} label={i.communityName} />)
-            })}
-        </DrawerContentScrollView>
-
-    )
-}
-
-function MyDrawer() {
-    return (
-        <DrawerNav.Navigator
-            useLegacyImplementation
-            drawerContent={(props) => <CustomDrawerContent {...props} />}
-        >
-
-            <DrawerNav.Screen name='Home' component={Home} options={{
-                headerShown: false,
-                drawerItemStyle: { display: 'none' }
-            }} />
-
-        </DrawerNav.Navigator>
-    )
-}
-
+ 
 export default function HomeTabs() {
 
     return (
@@ -76,8 +36,8 @@ export default function HomeTabs() {
 
 
             <Tab.Screen
-                name="HomeDrawer"
-                component={MyDrawer}
+                name="Home"
+                component={HomeDrawer}
                 options={{
                     tabBarIcon: ({ color }) => (
                         <MaterialCommunityIcons name="home" color={color} size={22} />
@@ -99,7 +59,7 @@ export default function HomeTabs() {
             />
             <Tab.Screen
                 name="Upload"
-                component={Upload}
+                component={UploadDrawer}
                 options={{
                     tabBarIcon: ({ color }) => (
                         <MaterialCommunityIcons name="plus" color={color} size={22} />
@@ -108,7 +68,7 @@ export default function HomeTabs() {
             />
             <Tab.Screen
                 name="DMessage"
-                component={DMessage}
+                component={ChatDrawer}
                 options={{
                     tabBarIcon: ({ color }) => (
                         <MaterialIcons name="chat-bubble" size={22} color={color} />
