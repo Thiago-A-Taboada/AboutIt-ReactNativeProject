@@ -6,7 +6,7 @@ import { CombinedDefaultTheme } from '../themes/AppTheme';
 import { AuthContext, AuthProvider } from '../context/AuthContext';
 
 import HomeTabs from './HomeTabs';
-import SplashScreen from '../screens/SplashScreen';
+// import SplashScreen from '../screens/SplashScreen';
 import SignInScreen from '../screens/SignInScreen';
 import ChatScreen from '../screens/ChatScreen';
 
@@ -19,9 +19,9 @@ export default function MyNavigator({ navigation }) {
 
   const { authData, loading } = React.useContext(AuthContext)
 
-  if (loading) {
-    return <SplashScreen />
-  }
+  // if (loading) {
+  //   return <SplashScreen />
+  // }
 
   return (
 
