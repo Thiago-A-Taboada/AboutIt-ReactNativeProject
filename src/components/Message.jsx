@@ -1,18 +1,22 @@
-import { StyleSheet, View } from "react-native"
+import { useNavigation } from "@react-navigation/native";
+import { Alert, StyleSheet, TouchableOpacity, View } from "react-native"
 import { Avatar, Text } from "react-native-paper"
 
-export default function Message() {
+export default function Message( ) {
+    const navigation = useNavigation(); 
     return (
-        <View style={styles.container}>
-            <View style={styles.avatarNameAndMessage}>
-                <Avatar.Icon icon={'circle'} size={80} backgroundColor={'transparent'}/>
-                <View style={styles.nameAndMessage}>
-                    <Text style={styles.name}>Usuario</Text>
-                    <Text style={styles.message}>Mensagem...</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('Chat')}>
+            <View style={styles.container}>
+                <View style={styles.avatarNameAndMessage}>
+                    <Avatar.Icon icon={'circle'} size={80} backgroundColor={'transparent'} />
+                    <View style={styles.nameAndMessage}>
+                        <Text style={styles.name}>Usuario</Text>
+                        <Text style={styles.message}>Mensagem...</Text>
+                    </View>
                 </View>
+                <Text>22/08/2022</Text>
             </View>
-            <Text>22/08/2022</Text>
-        </View>
+        </TouchableOpacity>
     )
 }
 

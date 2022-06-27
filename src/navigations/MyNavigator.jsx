@@ -8,6 +8,7 @@ import { AuthContext, AuthProvider } from '../context/AuthContext';
 import HomeTabs from './HomeTabs';
 import SplashScreen from '../screens/SplashScreen';
 import SignInScreen from '../screens/SignInScreen';
+import ChatScreen from '../screens/ChatScreen';
 
 const Stack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
@@ -28,11 +29,19 @@ export default function MyNavigator({ navigation }) {
       <Stack.Navigator theme={CombinedDefaultTheme} >
 
         {true ? (
-          <Stack.Screen
-            name="HomeTabs"
-            component={HomeTabs}
-            options={{ headerShown: false }}
-          />
+          <>
+            <Stack.Screen
+              name="HomeTabs"
+              component={HomeTabs}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen 
+              name='Chat'
+              component={ChatScreen}
+              options={{ headerShown: false }}
+            />
+          </>
+
         ) : (
           <Stack.Screen
             name="SignIn"
