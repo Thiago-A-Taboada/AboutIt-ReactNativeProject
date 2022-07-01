@@ -18,8 +18,6 @@ export default function CustomDrawerContent(props) {
 
             <ProfileItem title="Meu Perfil" icon="account" />
             <ProfileItem title="Criar uma comunidade" icon="forum" />
-            <ProfileItem title="Salvos" icon="content-save" />
-            <ProfileItem title="Meu Perfil" icon="history" />
 
             <DrawerItemList {...props} />
             <Text style={{ marginLeft: 10, marginTop: 40, marginBottom: 20 }}>Minhas Comunidades</Text>
