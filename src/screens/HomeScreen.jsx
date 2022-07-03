@@ -27,16 +27,13 @@ export default function Home({ navigation }) {
 
   return (
     <>
-      
-      <Appbar.Header style={{ justifyContent: 'space-between' }}>
-        <Appbar.Action icon="menu" 
-        onPress={() => navigation.dispatch(DrawerActions.openDrawer())} />
-        <Searchbar style={{ width: 280, }} placeholder="Buscar" />
-        <Appbar.Action icon="circle" 
-          onPress={() => navigation.dispatch(DrawerActions.openDrawer())}
-        />
+
+      <Appbar.Header style={{ justifyContent: 'flex-start' }}>
+        <Appbar.Action icon="menu"
+          onPress={() => navigation.dispatch(DrawerActions.openDrawer())} />
+        <Searchbar style={{ width: 280, backgroundColor: '#232326' }} placeholder="Buscar" />
       </Appbar.Header>
-   
+
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         {/*  {auth.authData ? auth.authData.user : '...'} */}
 
@@ -60,4 +57,3 @@ export default function Home({ navigation }) {
     </>
   );
 }
- 

@@ -9,6 +9,8 @@ import HomeTabs from './HomeTabs';
 // import SplashScreen from '../screens/SplashScreen';
 import SignInScreen from '../screens/SignInScreen';
 import ChatScreen from '../screens/ChatScreen';
+import CreateCommunityScreen from '../screens/CreateCommunityScreen';
+import AddContactScreen from '../screens/AddContactScreen';
 
 const Stack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
@@ -35,9 +37,19 @@ export default function MyNavigator({ navigation }) {
               component={HomeTabs}
               options={{ headerShown: false }}
             />
-            <Stack.Screen 
+            <Stack.Screen
               name='Chat'
               component={ChatScreen}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name='CreateCommunity'
+              component={CreateCommunityScreen}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name='AddContact'
+              component={AddContactScreen}
               options={{ headerShown: false }}
             />
           </>

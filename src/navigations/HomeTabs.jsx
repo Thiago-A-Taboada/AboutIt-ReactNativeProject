@@ -4,10 +4,9 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 import { CombinedDefaultTheme } from '../themes/AppTheme';
 
-import Explore from '../screens/ExploreScreen';
+
 import Home from '../screens/HomeScreen';
 import SignInScreen from '../screens/SignInScreen';
-import Notifications from '../screens/NotificationsScreen';
 import DMessage from '../screens/DMessageScreen';
 import Upload from '../screens/UploadScreen';
 import { createDrawerNavigator, DrawerContentScrollView, DrawerItemList, DrawerItem } from '@react-navigation/drawer';
@@ -45,19 +44,6 @@ export default function HomeTabs() {
                 }}
             />
             <Tab.Screen
-                name="Explore"
-                component={Explore}
-                options={{
-                    tabBarIcon: ({ color }) => (
-                        <MaterialCommunityIcons
-                            name="compass"
-                            color={color}
-                            size={22}
-                        />
-                    ),
-                }}
-            />
-            <Tab.Screen
                 name="Upload"
                 component={UploadDrawer}
                 options={{
@@ -75,16 +61,6 @@ export default function HomeTabs() {
                     ),
                 }}
             />
-            <Tab.Screen
-                name="Notifications"
-                component={Notifications}
-                options={{
-                    tabBarIcon: ({ color }) => (
-                        <MaterialCommunityIcons name="bell" color={color} size={22} />
-                    ),
-                }}
-            />
-
         </Tab.Navigator >
 
     )

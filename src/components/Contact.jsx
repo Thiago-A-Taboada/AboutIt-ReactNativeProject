@@ -2,19 +2,29 @@ import { useNavigation } from "@react-navigation/native";
 import { Alert, StyleSheet, TouchableOpacity, View } from "react-native"
 import { Avatar, Text } from "react-native-paper"
 
-export default function Message( ) {
-    const navigation = useNavigation(); 
+export default function Contact(props) {
+    const navigation = useNavigation();
+
+
+
     return (
-        <TouchableOpacity onPress={() => navigation.navigate('Chat')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Chat', {name: props.name, msg: props.lastMessage})}>
             <View style={styles.container}>
                 <View style={styles.avatarNameAndMessage}>
                     <Avatar.Icon icon={'circle'} size={80} backgroundColor={'transparent'} />
                     <View style={styles.nameAndMessage}>
-                        <Text style={styles.name}>Usuario</Text>
-                        <Text style={styles.message}>Mensagem...</Text>
+                        <Text style={styles.name}>{props.name}</Text>
+                        <Text style={styles.message}>
+                            {props.lastMessage.length > 25 ?
+                                props.lastMessage.slice(0, 25).concat('...')
+                                :
+                                props.lastMessage}
+                        </Text>
                     </View>
                 </View>
-                <Text>22/08/2022</Text>
+                <View style={styles.date}>
+                    <Text>{props.date}</Text>
+                </View>
             </View>
         </TouchableOpacity>
     )
@@ -39,9 +49,18 @@ const styles = StyleSheet.create({
 
     },
     name: {
-        fontSize: 17
+        fontSize: 17,
+
     },
     message: {
-        fontSize: 15
+        fontSize: 14,
+    },
+    date: {
+        position: 'absolute',
+        right: 5,
+        height: 80,
+        width: 90,
+        justifyContent: 'center',
+        alignItems: 'center'
     }
 })

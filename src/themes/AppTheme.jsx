@@ -8,12 +8,11 @@ export const CombinedDefaultTheme = {
   colors: {
     ...PaperDefaultTheme.colors,
     ...NavigationDefaultTheme.colors,
-    primary: '#232326',
+    primary: '#343438',
     background: '#232326',
     text: '#EBECFF',
     surface: '#343438',
     disabled: '#9B8EBB',
-    
 
   },
 };
