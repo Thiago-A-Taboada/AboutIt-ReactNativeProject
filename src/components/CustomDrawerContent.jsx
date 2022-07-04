@@ -6,17 +6,18 @@ import ProfileItem from './ProfileItem';
 import json from '../../assets/post.json';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
+import { AuthContext } from '../context/AuthContext';
 
 export default function CustomDrawerContent(props) {
     const [users, setUsers] = React.useState(json);
-
+    const { authData, loading } = React.useContext(AuthContext)
     const navigation = useNavigation(); 
 
     return (
         <DrawerContentScrollView style={{ backgroundColor: '#232326' }}>
             <View style={{ flexDirection: 'column', justifyContent: 'flex-start', alignItems: 'center', borderWidth: 0 }}>
                 <Avatar.Icon size={120} icon="circle" backgroundColor="transparent" />
-                <Text style={{ fontSize: 25, color: '#B6B9D9' }}>Fulano</Text>
+            <Text style={{ fontSize: 25, color: '#B6B9D9' }}>{authData ? authData.user : 'Fulano'}</Text>
             </View>
 
             <ProfileItem title="Meu Perfil" icon="account" />

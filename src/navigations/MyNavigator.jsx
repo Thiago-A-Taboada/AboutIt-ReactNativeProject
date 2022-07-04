@@ -21,16 +21,13 @@ export default function MyNavigator({ navigation }) {
 
   const { authData, loading } = React.useContext(AuthContext)
 
-  // if (loading) {
-  //   return <SplashScreen />
-  // }
 
   return (
 
     <NavigationContainer theme={CombinedDefaultTheme}>
       <Stack.Navigator theme={CombinedDefaultTheme} >
 
-        {true ? (
+        {authData ? (
           <>
             <Stack.Screen
               name="HomeTabs"

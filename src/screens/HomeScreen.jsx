@@ -11,7 +11,7 @@ import { DrawerActions } from '@react-navigation/native';
 
 export default function Home({ navigation }) {
   const auth = useAuth()
-  const [isLoading, setLoading] = React.useState(true);
+  const [isLoading, setLoading] = React.useState(false);
   const [users, setUsers] = React.useState(json);
 
   //setUsers(json);
@@ -43,6 +43,7 @@ export default function Home({ navigation }) {
         <FlatList
           data={users}
           renderItem={({ item }) => (
+            
             <Card style={{ marginVertical: 5, marginHorizontal: 0, paddingBottom: 17 }}>
               <Card.Title left={(props) => <Avatar.Image {...props} source={{ uri: item.thumbnailCommunity }} />} title={item.communityName} subtitle={item.idUser} />
               <Card.Content>

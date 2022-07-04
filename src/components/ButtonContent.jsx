@@ -5,6 +5,7 @@ import { Button } from 'react-native-paper'
 export default function ButtonContent(props) {
   return (
     <Button
+    uppercase={false}
      mode='contained'
      style={styles.btn}
      contentStyle={{height: 53}}

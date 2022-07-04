@@ -28,16 +28,20 @@ export default function Upload({ navigation }) {
         <Appbar.Action icon="menu" onPress={() => navigation.dispatch(DrawerActions.openDrawer())}
         />
         <Appbar.Content title="Nova Publicação" />
-        <Appbar.Action icon="circle" />
+        <Appbar.Action icon="arrow-right" onPress={() => navigation.navigate('Home')}/>
       </Appbar.Header>
       <View style={{ flex: 1 }}>
-        <TextInput style={styles.inputTitle} color={'pink'} underlineColor={'none'} placeholder='Um título...' />
-        <TextInput style={styles.input} placeholder='Descrição...' underlineColor={'none'} />
+        <TextInput 
+          placeholderTextColor= '#6F757A' 
+          style={styles.inputTitle} 
+          underlineColor={'none'} 
+          placeholder='Digite aqui...' 
+        />
 
       </View>
       {image && <Image source={{ uri: image }} style={{ width: 200, height: 200, marginLeft: 'auto', marginRight: 'auto', borderRadius: 5 }} />}
 
-      <Button textColor={'red'} style={{ fontSize: 100, }} icon='image' mode="contained" onPress={pickImage}>Adicionar imagem</Button>
+      <Button labelStyle={{ color: "#6F757A", fontSize: 18 }}  style={{ fontSize: 100, backgroundColor: 'transparent', color: "red" }} icon='image' mode="text" onPress={pickImage}>Adicionar imagem</Button>
     </>
   );
 }

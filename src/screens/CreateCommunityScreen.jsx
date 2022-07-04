@@ -15,7 +15,7 @@ export default function CreateCommunityScreen({ navigation }) {
                 />
             </Appbar.Header>
             <InputContent placeholder="Nome_da_comunidade" />
-            <ButtonContent label="SALVAR"/>
+            <ButtonContent label="Salvar"/>
         </>
     )
 }

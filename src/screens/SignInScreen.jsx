@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
 
 export default function SignInScreen() {
 
-    const [email, setEmail] = React.useState('dwdd');
+    const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
 
     const auth = useAuth();
@@ -96,6 +96,7 @@ export default function SignInScreen() {
             />
             <Text style={styles.textForget}>Esqueceu a senha?</Text>
             <Button
+                uppercase={false}
                 onPress={() => handleSignIn()}
                 style={styles.button}
                 labelStyle={{color: "#FFF"}}
