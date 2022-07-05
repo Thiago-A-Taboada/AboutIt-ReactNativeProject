@@ -28,8 +28,13 @@ export const AuthProvider = ({ children }) => {
          
     }
 
+    const editUser = async (newUser, newPass) => {
+        setAuthData({user: newUser, password: newPass})
+        console.log(authData)
+    }
+
     return (
-        <AuthContext.Provider value={{ authData, setAuthData, signIn, signOut }}>
+        <AuthContext.Provider value={{ authData, setAuthData, signIn, signOut, editUser }}>
             {children}
         </AuthContext.Provider>
     )

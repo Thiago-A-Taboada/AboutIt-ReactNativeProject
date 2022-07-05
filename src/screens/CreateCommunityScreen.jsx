@@ -9,13 +9,16 @@ export default function CreateCommunityScreen({ navigation }) {
 
     return (
         <>
-            <Appbar.Header style={{ justifyContent: 'space-between', backgroundColor: '#343438'}}>
+            <Appbar.Header style={{ justifyContent: 'space-between', backgroundColor: '#343438' }}>
                 <Appbar.BackAction onPress={() => navigation.dispatch(CommonActions.goBack())} />
                 <Appbar.Content title="Criar Comunidade"
                 />
             </Appbar.Header>
-            <InputContent placeholder="Nome_da_comunidade" />
-            <ButtonContent label="Salvar"/>
+            <View style={{ marginTop: 59, marginLeft: 'auto', marginRight: 'auto' }} >
+                <InputContent placeholder="Nome_da_comunidade" />
+                <ButtonContent label="Salvar" />
+            </View>
+
         </>
     )
 }

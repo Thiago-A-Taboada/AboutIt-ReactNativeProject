@@ -5,21 +5,20 @@ import { TextInput } from 'react-native-paper'
 export default function InputContent(props) {
     return (
         <TextInput
+            placeholderTextColor='#6F757A'
             style={styles.input}
             placeholder={props.placeholder}
             bottomLine={false}
-            underlineColor={'none'} 
+            underlineColor={'none'}
         />
     )
 }
 
 const styles = StyleSheet.create({
     input: {
-        height: 40,
         width: 300,
-        marginTop: 59,
-        marginLeft: 'auto',
-        marginRight: 'auto',
+        height: 40,
+        borderRadius: 4,
         backgroundColor: '#343438',
         placeholder: '#EBECFF'
     }

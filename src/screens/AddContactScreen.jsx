@@ -13,8 +13,11 @@ export default function AddContactScreen({ navigation }) {
         <Appbar.Content title="Adicionar Contato"
         />
       </Appbar.Header>
-      <InputContent placeholder="digite o nome" />
-      <ButtonContent label="Buscar" />
+      <View style={{ marginTop: 59, marginLeft: 'auto', marginRight: 'auto' }} >
+        <InputContent width={300} placeholder="digite o nome" />
+        <ButtonContent label="Buscar" />
+      </View>
+
     </>
   )
 }

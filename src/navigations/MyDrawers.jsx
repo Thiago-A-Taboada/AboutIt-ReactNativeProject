@@ -28,12 +28,10 @@ export function HomeDrawer() {
             useLegacyImplementation
             drawerContent={(props) => <CustomDrawerContent {...props} />}
         >
-
             <DrawerNav.Screen name='HomeDrawer' component={Home} options={{
                 headerShown: false,
                 drawerItemStyle: { display: 'none' }
             }} />
-    
         </DrawerNav.Navigator>
     )
 }

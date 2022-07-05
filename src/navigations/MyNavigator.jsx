@@ -6,12 +6,13 @@ import { CombinedDefaultTheme } from '../themes/AppTheme';
 import { AuthContext, AuthProvider } from '../context/AuthContext';
 
 import HomeTabs from './HomeTabs';
-// import SplashScreen from '../screens/SplashScreen';
+ 
 import SignInScreen from '../screens/SignInScreen';
+import RegisterScreen from '../screens/RegisterScreen';
 import ChatScreen from '../screens/ChatScreen';
 import CreateCommunityScreen from '../screens/CreateCommunityScreen';
 import AddContactScreen from '../screens/AddContactScreen';
-
+import ProfileScreen from '../screens/ProfileScreen';
 const Stack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
 
@@ -49,18 +50,32 @@ export default function MyNavigator({ navigation }) {
               component={AddContactScreen}
               options={{ headerShown: false }}
             />
+            <Stack.Screen
+              name='Profile'
+              component={ProfileScreen}
+              options={{ headerShown: false }}
+            />
           </>
 
         ) : (
-          <Stack.Screen
-            name="SignIn"
-            component={SignInScreen}
-            options={{
-              title: 'SignIn',
-              headerShown: false,
+          <>
+            <Stack.Screen
+              name="SignIn"
+              component={SignInScreen}
+              options={{           
+                headerShown: false,
+              }}
+            />
+            <Stack.Screen
+              name="Register"
+              component={RegisterScreen}
+              options={{
+                headerShown: false,
+              }}
+            />
+          </>
 
-            }}
-          />
+
         )
         }
 
